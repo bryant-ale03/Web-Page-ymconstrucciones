@@ -13,7 +13,7 @@ y el mensaje que escribas.
 
 ### Cloudflare pages
 
-Esta página web está desplegada en Cloudflare pages. [Su política de privacidad](https://www.cloudflare.com/privacypolicy/) tambiéne aplica 
+Esta página web está desplegada en Cloudflare pages. [Su política de privacidad](https://www.cloudflare.com/privacypolicy/) también aplica 
 a esta web
 
 ## Para qué los usamos
