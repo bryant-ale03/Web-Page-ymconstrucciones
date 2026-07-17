@@ -1,0 +1,38 @@
+site:
+  name: 'Y&M Construcciones'
+  site: 'https://www.tudominio.com'
+  base: '/'
+  trailingSlash: false
+
+# Metadatos SEO por defecto
+metadata:
+  title:
+    default: 'Y&M Construcciones'
+    template: '%s — Y&M Construcciones'
+  description: 'Reformas integrales, fontanería e instalaciones. Presupuesto gratis y sin compromiso.'
+  robots:
+    index: true
+    follow: true
+  openGraph:
+    site_name: 'Y&M Construcciones'
+    images:
+      - url: '~/assets/images/default.png'
+        width: 1200
+        height: 628
+    type: website
+
+i18n:
+  language: es
+  textDirection: ltr
+
+apps:
+  blog:
+    isEnabled: false
+
+analytics:
+  vendors:
+    googleAnalytics:
+      id: null # o "G-XXXXXXXXXX" si más adelante añades Google Analytics
+
+ui:
+  theme: 'light:only' # Esta web no necesita modo oscuro

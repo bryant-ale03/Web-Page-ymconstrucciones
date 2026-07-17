@@ -1,0 +1,227 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import BeforeAfter from '~/components/widgets/BeforeAfter.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Contact from '~/components/widgets/Contact.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Y&M Construcciones | Reformas, Instalaciones y Fontanería',
+  ignoreTitleTemplate: true,
+};
+
+// --- Proyectos realizados (antes / después) ---
+// Para añadir o cambiar un proyecto, edita este array.
+// "antes" y "despues" pueden ser una URL o una ruta local, p. ej. "/images/mi-foto.jpg"
+// (coloca el archivo dentro de la carpeta public/images).
+const proyectos = [
+  {
+    titulo: 'Reforma Integral de Baño',
+    descripcion:
+      'Cambio de tuberías antiguas, instalación de plato de ducha moderno y renovación completa de azulejos.',
+    antes: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80',
+    despues: 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=600&q=80',
+  },
+  {
+    titulo: 'Instalación y Fontanería en Cocina',
+    descripcion:
+      'Renovación del sistema de desagües, tomas de agua y fontanería general para cocina americana.',
+    antes: 'https://images.unsplash.com/photo-1565538810844-1e119fa11123?auto=format&fit=crop&w=600&q=80',
+    despues: 'https://images.unsplash.com/photo-1556912173-3bb406ef7e77?auto=format&fit=crop&w=600&q=80',
+  },
+];
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero ******************* -->
+
+  <Hero
+    tagline="Reformas · Fontanería · Instalaciones"
+    actions={[
+      { variant: 'primary', text: 'Solicitar presupuesto gratis', href: '#presupuesto' },
+      { text: 'Ver proyectos', href: '#proyectos' },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1350&q=80',
+      alt: 'Reforma de vivienda en curso',
+    }}
+  >
+    <Fragment slot="title">
+      Reformas Integrales, <span class="text-accent dark:text-white">Fontanería</span> e Instalaciones
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Hacemos realidad tus proyectos con la máxima seriedad y acabados profesionales. Cuéntanos qué
+      necesitas y nos encargamos de todo.
+    </Fragment>
+  </Hero>
+
+  <!-- Servicios ******************* -->
+
+  <Features
+    id="servicios"
+    tagline="Servicios"
+    title="En qué podemos ayudarte"
+    subtitle="Más de 10 años de experiencia en reformas, fontanería e instalaciones para hogares y negocios."
+    columns={3}
+    items={[
+      {
+        title: 'Reformas integrales',
+        description: 'Baños, cocinas y viviendas completas, de principio a fin y sin sorpresas.',
+        icon: 'tabler:hammer',
+      },
+      {
+        title: 'Fontanería',
+        description: 'Averías, tuberías, desagües y nuevas instalaciones de agua.',
+        icon: 'tabler:droplet',
+      },
+      {
+        title: 'Instalaciones',
+        description: 'Instalaciones eléctricas y de fontanería para cocinas, baños y locales.',
+        icon: 'tabler:plug',
+      },
+      {
+        title: 'Reparaciones generales',
+        description: 'Pequeñas y grandes reparaciones en el hogar, resueltas con garantía.',
+        icon: 'tabler:tools',
+      },
+      {
+        title: 'Presupuesto gratis',
+        description: 'Sin compromiso y adaptado a tu proyecto, lo antes posible.',
+        icon: 'tabler:file-invoice',
+      },
+      {
+        title: 'Atención directa',
+        description: 'Hablas siempre con quien va a realizar el trabajo, sin intermediarios.',
+        icon: 'tabler:phone-call',
+      },
+    ]}
+  />
+
+  <!-- Proyectos (antes / después) ******************* -->
+
+  <BeforeAfter
+    id="proyectos"
+    tagline="Nuestro trabajo"
+    title="Proyectos realizados"
+    subtitle="Algunos ejemplos de reformas y reparaciones antes y después de nuestra intervención."
+    proyectos={proyectos}
+  />
+
+  <!-- Cómo trabajamos ******************* -->
+
+  <Steps
+    id="proceso"
+    tagline="Proceso"
+    title="Cómo trabajamos"
+    items={[
+      {
+        title: '1. <span class="font-medium">Nos cuentas tu proyecto</span>',
+        description: 'Por teléfono o a través del formulario, cuéntanos qué necesitas.',
+        icon: 'tabler:message-circle',
+      },
+      {
+        title: '2. <span class="font-medium">Visitamos y presupuestamos</span>',
+        description: 'Valoramos el trabajo in situ y te damos un presupuesto claro, sin compromiso.',
+        icon: 'tabler:clipboard-check',
+      },
+      {
+        title: '3. <span class="font-medium">Ejecutamos el trabajo</span>',
+        description: 'Realizamos la reforma o reparación con materiales de calidad y buen acabado.',
+        icon: 'tabler:hammer',
+      },
+      {
+        title: '4. <span class="font-medium">Entrega y garantía</span>',
+        description: 'Revisamos el resultado contigo y respondemos ante cualquier incidencia.',
+        icon: 'tabler:check',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?auto=format&fit=crop&w=987&q=80',
+      alt: 'Trabajador realizando una reforma',
+    }}
+  />
+
+  <!-- Preguntas frecuentes ******************* -->
+
+  <FAQs
+    id="faqs"
+    tagline="Preguntas frecuentes"
+    title="Dudas habituales"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: '¿El presupuesto tiene algún coste?',
+        description: 'No, valoramos tu proyecto y te damos un presupuesto totalmente gratuito y sin compromiso.',
+      },
+      {
+        title: '¿En cuánto tiempo me contestáis?',
+        description:
+          'Normalmente respondemos en menos de 24 horas laborables, ya sea por teléfono o por el formulario.',
+      },
+      {
+        title: '¿Trabajáis fuera de la ciudad?',
+        description: 'Sí, consúltanos tu zona a través del formulario de presupuesto y te confirmamos disponibilidad.',
+      },
+      {
+        title: '¿Los trabajos tienen garantía?',
+        description: 'Sí, todos nuestros trabajos incluyen garantía. Si surge cualquier incidencia, la resolvemos.',
+      },
+    ]}
+  />
+
+  <!-- Formularios: Dudas y Presupuesto ******************* -->
+
+  <Contact
+    id="consultas"
+    tagline="Foro de dudas"
+    title="¿Tienes alguna duda técnica?"
+    subtitle="Escríbenos tu pregunta sobre una reparación o instalación y te respondemos encantados."
+    inputs={[{ type: 'text', name: 'nombre', label: 'Tu nombre' }]}
+    textarea={{
+      label: '¿Cuál es tu duda?',
+      name: 'mensaje',
+      placeholder: 'Ej. ¿Qué tipo de tubería es mejor para la instalación exterior...?',
+    }}
+    disclaimer={{
+      label: 'Acepto que mis datos sean tratados para poder responder a mi consulta.',
+    }}
+    button="Publicar consulta"
+  />
+
+  <Contact
+    id="presupuesto"
+    tagline="Solicitar servicio"
+    title="Pide tu presupuesto gratis"
+    subtitle="Cuéntanos qué necesitas y te contactamos con un presupuesto sin compromiso."
+    inputs={[
+      { type: 'text', name: 'nombre', label: 'Nombre completo' },
+      { type: 'tel', name: 'telefono', label: 'Teléfono de contacto' },
+    ]}
+    textarea={{
+      label: 'Cuéntanos qué necesitas',
+      name: 'mensaje',
+      placeholder: 'Describe brevemente el trabajo a realizar...',
+    }}
+    disclaimer={{
+      label: 'Acepto que mis datos sean tratados para poder contestar a mi solicitud de presupuesto.',
+    }}
+    button="Enviar solicitud"
+  />
+
+  <!-- Llamada a la acción final ******************* -->
+
+  <CallToAction
+    id="contacto"
+    actions={[{ variant: 'primary', text: 'Llamar ahora: 624 70 12 28', href: 'tel:+34624701228' }]}
+  >
+    <Fragment slot="title">¿Hablamos de tu proyecto?</Fragment>
+    <Fragment slot="subtitle">
+      Llámanos o escríbenos y te ayudamos a encontrar la mejor solución para tu reforma o avería.
+    </Fragment>
+  </CallToAction>
+</Layout>
