@@ -5,15 +5,16 @@ layout: '~/layouts/MarkdownLayout.astro'
 
 _Última actualización: julio de 2026_
 
-En **Y&M Construcciones** respetamos tu privacidad. Este texto es un punto de partida
-sencillo; te recomendamos revisarlo con un profesional antes de publicarlo si tratas
-datos de clientes de forma habitual.
-
 ## Qué datos recogemos
 
 A través de los formularios de esta web (consultas y solicitud de presupuesto)
 recogemos únicamente los datos que nos facilitas voluntariamente: nombre, teléfono
 y el mensaje que escribas.
+
+### Cloudflare pages
+
+Esta página web está desplegada en Cloudflare pages. [Su política de privacidad](https://www.cloudflare.com/privacypolicy/) tambiéne aplica 
+a esta web
 
 ## Para qué los usamos
 
