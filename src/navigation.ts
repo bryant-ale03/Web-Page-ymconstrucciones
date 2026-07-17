@@ -48,6 +48,6 @@ export const footerData = {
     { ariaLabel: 'Email', icon: 'tabler:mail', href: 'mailto:yosmarmontes@gmail.com' },
   ],
   footNote: `
-    Web hecha con Astro + Tailwind CSS.
+    
   `,
 };
